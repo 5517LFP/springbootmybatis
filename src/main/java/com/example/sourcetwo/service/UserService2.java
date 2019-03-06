@@ -1,7 +1,8 @@
-package com.example.service;
+package com.example.sourcetwo.service;
 
+
+import com.example.sourcetwo.mapper.UserMapper2;
 import com.example.entity.User;
-import com.example.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +12,11 @@ import org.springframework.stereotype.Service;
  * @Time: 15:23
  */
 @Service
-public class UserService {
+public class UserService2 {
     @Autowired
-    UserMapper userMapper;
+    UserMapper2 userMapper2;
     public User Sel(int id){
-        return userMapper.Sel(id);
+        System.out.println("参数为："+id);
+        return userMapper2.Sel(id);
     }
 }
