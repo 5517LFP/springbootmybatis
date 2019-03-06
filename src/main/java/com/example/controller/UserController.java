@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.entity.User;
 import com.example.sourceone.service.UserService;
 import com.example.sourcetwo.service.UserService2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,5 +28,16 @@ public class UserController {
     @RequestMapping("getUser2/{id}")
     public String GetUser2(@PathVariable int id){
         return userService2.Sel(id).toString();
+    }
+
+    @RequestMapping("insert/{id}")
+    public String insertUser(@PathVariable int id){
+        System.out.println(id+"dsfasdfasdfasdfasdfasdf");
+        User user=new User();
+        user.setId(id);
+        user.setPassWord("56982");
+        user.setUserName("wakaka");
+        user.setRealName("aJw");
+        return userService2.insertUser(user)+"";
     }
 }
