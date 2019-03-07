@@ -3,8 +3,9 @@ package com.example.demo;
 
 
 import com.example.entity.User;
-import com.example.sourcetwo.mapper.UserMapper2;
 
+
+import com.example.sourcetwo.mapper.UserMapper2;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -18,7 +19,7 @@ public class DemoApplicationTests {
 
 
     @Autowired
-    UserMapper2 userMapper2;
+   UserMapper2 userMapper2;
 
 
     @Test
@@ -26,21 +27,13 @@ public class DemoApplicationTests {
     }
     @Test
     public void test(){
-        User user=new User();
+      /*  User user=new User();
         user.setRealName("dsfsd");
         user.setUserName("sdfa");
         user.setId(66);
         user.setPassWord("dsd");
-        userMapper2.insert(user);
+        userMapper2.insert(user);*/
     }
 
-
-    @Test
-    public void testdelete(){
-
-
-        //userMapper2.delete(2);
-        userMapper2.insert2(11,"52","55","144");
-    }
 
 }

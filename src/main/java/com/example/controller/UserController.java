@@ -31,7 +31,7 @@ public class UserController {
         return userService2.Sel(id).toString();
     }
 
-    @RequestMapping("insert/{id}")
+   @RequestMapping("insert/{id}")
     public String insertUser(@PathVariable int id){
         System.out.println(id+"dsfasdfasdfasdfasdfasdf");
         User user=new User();
