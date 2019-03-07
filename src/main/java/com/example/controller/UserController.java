@@ -3,6 +3,7 @@ package com.example.controller;
 import com.example.entity.User;
 import com.example.sourceone.service.UserService;
 import com.example.sourcetwo.service.UserService2;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,4 +41,12 @@ public class UserController {
         user.setRealName("aJw");
         return userService2.insertUser(user)+"";
     }
+
+    @RequestMapping("/selectby")
+    public PageInfo<User> selectusebypage(Integer pagenum,Integer pagesize){
+       PageInfo<User> list=userService.findList(pagenum,pagesize);
+       return list;
+
+    }
+
 }
